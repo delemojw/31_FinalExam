@@ -2,9 +2,9 @@
 Final exam, problem 5.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and Jabari-Aman Delemore.  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -135,6 +135,12 @@ def problem5(m, numbers1, numbers2):
     Type hints:
       :type [str]
     """
+    s = []
+    for k in range(len(numbers1)):
+        for j in range(len(numbers2)):
+            numbers2[k] = numbers2[j] * m
+            s = s + [numbers2[j]]
+    return s
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
