@@ -102,6 +102,9 @@ def problem3(point, circle1, circle2, window):
     line1 = rg.Line(point, circle1.center)
     line2 = rg.Line(circle1.center, circle2.center)
     line3 = rg.Line(circle2.center, point)
+    line1.outline_color = circle2.fill_color
+    line2.outline_color = circle2.fill_color
+    line3.outline_color = circle2.fill_color
     line1.attach_to(window)
     line2.attach_to(window)
     line3.attach_to(window)
@@ -116,7 +119,7 @@ def problem3(point, circle1, circle2, window):
     line5.attach_to(window)
     line6.attach_to(window)
     window.render()
-    window.continue_on_mouse_click()
+
 
 
     # ------------------------------------------------------------------
