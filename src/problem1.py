@@ -171,7 +171,7 @@ def problem1b(numbers):
     Type hints:
       :type numbers:  [int]
     """
-    
+
 
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
