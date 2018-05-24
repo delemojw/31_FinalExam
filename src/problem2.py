@@ -21,7 +21,7 @@ def main():
     print(' to run the testing code as you complete the TODOs.')
     run_test_problem2a()
     run_test_problem2b()
-    # run_test_problem2c()
+    run_test_problem2c()
 
 
 def is_prime(n):
@@ -404,6 +404,11 @@ def problem2c(x):
     Type hints:
       :type x:    int
     """
+    s = sum_of_digits(x)
+    if is_prime(s) == True:
+        return x
+
+
     # -------------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
