@@ -2,9 +2,9 @@
 Final exam, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and Jabari-Aman Delemomre.  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 import time
@@ -92,6 +92,33 @@ def problem3(point, circle1, circle2, window):
        :type circle2:  rg.Circle
       :type window:    rg.RoseWindow
     """
+    point = rg.Point(point.x, point.y)
+    circle1 = rg.Circle(circle1.center, circle1.radius)
+    circle2 = rg.Circle(circle2.center, circle2.radius)
+    point.attach_to(window)
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    window.render()
+    line1 = rg.Line(point, circle1.center)
+    line2 = rg.Line(circle1.center, circle2.center)
+    line3 = rg.Line(circle2.center, point)
+    line1.attach_to(window)
+    line2.attach_to(window)
+    line3.attach_to(window)
+    window.render()
+    point1 = rg.Point((point.x - circle1.center.x)/2, (point.y - circle1.center.y)/2)
+    point2 = rg.Point(((circle2.center.x + circle1.center.x)/2),((circle2.center.y - circle1.center.y)/2))
+    point3 = rg.Point(((line3.end.x - line3.start.x)/2),((line3.end.y - line3.start.y)/2))
+    line4 = rg.Line(point1,point2)
+    line5 = rg.Line(point2,point3)
+    line6 = rg.Line(point3, point1)
+    line4.attach_to(window)
+    line5.attach_to(window)
+    line6.attach_to(window)
+    window.render()
+    window.continue_on_mouse_click()
+
+
     # ------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
