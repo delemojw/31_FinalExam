@@ -74,6 +74,7 @@ And this one for n=14:
 
     :type n: int
     """
+    # ;)
     # ------------------------------------------------------------------
     # TODO: Implement and test this function.
     #          Some tests are already written for you (above).
